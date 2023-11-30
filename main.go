@@ -55,7 +55,8 @@ func main() {
 	if (isRoman && err == nil) || (!isRoman && err != nil) {
 		fmt.Println("Вывод ошибки, так как используются одновременно разные системы счисления.")
 		return
-	} else {
+	}
+	if err != nil {
 		if strings.ContainsAny(parts[0], "IVX") {
 			number2 = convertFromRoman(parts[2])
 			isRoman = true
